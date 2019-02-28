@@ -33,5 +33,13 @@ public class MiArrayList {
         }else{
         throw new ArrayIndexOutOfBoundsException("Usuario el index sobrepasa el tamaño");
         }
-}
+	}
+	        public void del(int index){
+           elements[index]=0;
+        for(int i=index;i<size-1;i++){
+            elements[i]=elements[i+1];
+        }
+        size=size-1;
+        
+        }
 }
