@@ -23,8 +23,15 @@ public class MiArrayList {
 			}
 			elements[index]=e;
 		}else {
-			throw new ArrayIndexOutOfBoundsException("Usuario el index sobrepasa el tama�o");
+			throw new ArrayIndexOutOfBoundsException("Usuario el index sobrepasa el tamaño");
 		}
 	}
-	//
+	public void new_array(int index,int e) throws ArrayIndexOutOfBoundsException{
+        if(index== elements.length+1){
+            elements = new int[DEFAULT_CAPACITY*2];
+            elements[index]=e;
+        }else{
+        throw new ArrayIndexOutOfBoundsException("Usuario el index sobrepasa el tamaño");
+        }
+}
 }
