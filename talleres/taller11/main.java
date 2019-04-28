@@ -2,11 +2,9 @@
 public class main {
 
 	public static void main(String[] args) {
-		int[] d = {1,2,3,4};
-		Grafo f = new Grafo(d);
-		GrafoDlistas grfdl = new GrafoDlistas(d);
-		GrafoMatriz matriz = new GrafoMatriz(5);
 		
+		GrafoMatriz matriz = new GrafoMatriz(5);
+		Graph Grafo  = new Graph();
 		/**
 		 * Implementacion del grafo con matrices
 		 * 
@@ -37,16 +35,32 @@ public class main {
 		
 		
 		/**
-		 * Implementaciòn del grafo con listas
+		 * ImplementaciÃ²n del grafo con listas
 		 */
-		grfdl.setRelaciones(1, 2);
-		grfdl.setRelaciones(1, 3);
-		grfdl.setRelaciones(2, 4);
-		grfdl.setRelaciones(3, 2);
-		grfdl.setRelaciones(4, 3);
 		
-		grfdl.getRelaciones(1);	
-
+		Grafo.addVertice(18);
+		Grafo.addVertice(9);
+		Grafo.addVertice(3);
+		Grafo.addVertice(1);
+		Grafo.addVertice(2);
+		Grafo.addArista(18, 18, 0);
+		Grafo.addArista(9, 9, 0);
+		Grafo.addArista(9, 18, 0);
+		Grafo.addArista(3, 3, 0);
+		Grafo.addArista(3, 9, 0);
+		Grafo.addArista(3, 18, 0);
+		Grafo.addArista(1, 1, 0);
+		Grafo.addArista(1, 3, 0);
+		Grafo.addArista(1, 18, 0);
+		Grafo.addArista(1, 9, 0);
+		Grafo.addArista(1, 2, 0);
+		Grafo.addArista(2, 2, 0);
+		Grafo.addArista(2, 18, 0);
+		Grafo.impArista(1);
+		Grafo.impArista(2);
+		Grafo.impArista(3);
+		Grafo.impArista(9);
+		Grafo.impArista(18);
 
 	}
 
