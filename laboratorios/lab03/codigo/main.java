@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class main {
 	private static String DAT1a;
@@ -29,7 +31,36 @@ public class main {
 		 
 		//Implementaciòn de consulta por alumno
 		 ConsultarEstudainte("Aureliano");
-	}
+		 
+		 System.out.println("Implementacion del punto 2.1 ____________________________");
+		 System.out.println("Ingrese el texto");
+		 //Implementacion del punto 2.1___________________________________
+		 Corregir co = new Corregir();
+			String cad = "";
+			InputStreamReader isr = new InputStreamReader(System.in);
+			BufferedReader br = new BufferedReader (isr);
+			String cadena = br.readLine();
+			
+			for(int i=0;i<=cadena.length()-1;i++) {
+				
+				co.add(cadena.substring(i,i+1), i);
+			}
+			
+			for(int i=0;i<=co.tamaño()-1;i++) {
+				
+				char caracter = co.get(i).charAt(0);
+				int d = (int)caracter;
+				if(d!=91 && d!=93) {
+					cad=cad+co.get(i);
+				}
+				
+			}
+			System.out.println(cad);
+			//________________________________________________________________
+
+		}
+	
+	
 	
 	/*
 	 * Metodo que me ingresa o consulta por materia dependiendo si es 1 o 0
